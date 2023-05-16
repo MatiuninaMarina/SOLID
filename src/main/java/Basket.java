@@ -3,11 +3,13 @@ import java.util.Map;
 public class Basket {
     protected Purchase[] purchases;
     protected Map<String, Integer> prices;
+
     public Basket(Map<String, Integer> prices) {
         this.prices = prices;
         this.purchases = new Purchase[prices.size()];
 
     }
+
     public void addPurchase(String title, int count) {
         for (int i = 0; i < purchases.length; i++) {
             if (purchases[i] == null) {
@@ -20,6 +22,7 @@ public class Basket {
             }
         }
     }
+
     public long sum() {
         long sum = 0;
         System.out.println("КОРЗИНА:");
